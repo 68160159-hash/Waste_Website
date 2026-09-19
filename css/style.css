@@ -1,0 +1,108 @@
+/* Theme Colors from SPEC */
+:root {
+    --primary: #3A86FF;
+    --secondary: #BDB2FF;
+    --accent: #FFD6E0;
+    --bg: #FFF4F4;
+    --text: #2d3436;
+    --error: #d63031;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { font-size: 1.5rem; }
+header a { 
+    color: white; 
+    text-decoration: none; 
+    background: rgba(255,255,255,0.2); 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+    transition: background 0.2s;
+}
+header a:hover { background: rgba(255,255,255,0.3); }
+
+/* Main Layout */
+main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+section { margin-bottom: 3rem; }
+h2 { margin-bottom: 1rem; color: var(--primary); }
+
+/* Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card.highlight { border-left: 4px solid var(--primary); }
+.card-label { font-size: 0.9rem; color: #636e72; }
+.card-value { font-size: 1.8rem; font-weight: bold; color: var(--text); }
+
+/* Bar Chart Table */
+.bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+.bar-label {
+    width: 180px;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+.bar-track {
+    flex-grow: 1;
+    background: #eee;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: var(--secondary);
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+}
+
+.bar-value {
+    width: 80px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* States */
+.loading-msg { color: #636e72; font-style: italic; }
+.error-msg { color: var(--error); margin-top: 0.5rem; }
+.hidden { display: none !important; }

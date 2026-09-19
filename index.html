@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangsaen Waste Watch</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bangsaen Waste Watch</h1>
+        <nav>
+            <a href="report.html">แจ้งจุดขยะ</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section: บางแสนวันนี้ -->
+        <section id="bangsaen-today">
+            <h2>บางแสนวันนี้</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <span class="card-label">ขยะเกิดใหม่ (ตัน/วัน)</span>
+                    <span class="card-value" id="val-generated">กำลังโหลด...</span>
+                </div>
+                <div class="card">
+                    <span class="card-label">กำจัดถูกต้อง (ตัน/วัน)</span>
+                    <span class="card-value" id="val-proper">กำลังโหลด...</span>
+                </div>
+                <div class="card highlight">
+                    <span class="card-label">อัตราการกำจัดถูกต้อง</span>
+                    <span class="card-value" id="val-rate">กำลังโหลด...</span>
+                </div>
+            </div>
+            <p id="bangsaen-error" class="error-msg hidden"></p>
+        </section>
+
+        <!-- Section: Top 5 อปท. -->
+        <section id="top-local-govs">
+            <h2 id="top-title">5 อปท.ที่มีขยะมากที่สุด</h2>
+            <div id="top-table-container">
+                <p class="loading-msg">กำลังโหลด...</p>
+            </div>
+            <p id="top-error" class="error-msg hidden"></p>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
